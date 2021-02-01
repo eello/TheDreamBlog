@@ -5,6 +5,9 @@ import * as morgan from 'morgan';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 import { LoggerService } from './logger/logger.service';
+import * as session from 'express-session';
+import * as redis from 'redis';
+import * as connectRedis from 'connect-redis';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
@@ -19,6 +22,17 @@ async function bootstrap() {
     }),
   );
 
+  /** redis + session 설정 */
+  const redisStore = connectRedis(session);
+  const redisClient = redis.createClient(app.get(ConfigService).get('redis'));
+  app.use(
+    session({
+      secret: app.get(ConfigService).get('session_secret'),
+      resave: false,
+      saveUninitialized: false,
+      store: new redisStore({ client: redisClient, ttl: 2 * 3600 }),
+    }),
+  );
   /** morgan 설정 */
   const MORGAN_FORMAT = `:remote-addr - :remote-user ":method :url HTTP/:http-version" :status ":referrer" ":user-agent" :response-time ms`;
   app.use(
@@ -37,4 +51,5 @@ async function bootstrap() {
   const PORT = app.get(ConfigService).get('port');
   await app.listen(PORT);
 }
+
 bootstrap();

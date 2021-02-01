@@ -1,4 +1,5 @@
 export const config = () => ({
+  session_secret: process.env.SESSION_SECRET,
   port: Number(process.env.SERVER_PORT),
   redis: {
     port: Number(process.env.REDIS_PORT),
