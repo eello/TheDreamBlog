@@ -1,0 +1,22 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  background: linear-gradient(#0c0d0e 10%, #1c1749 55%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  overflow: hidden;
+}
+
+.wrap {
+  margin: 0 auto;
+}
+
+.container {
+  width: 1130px;
+  margin: 0 auto;
+}
+
+footer {
+  width: 1130px;
+  margin: 0 auto;
+}
