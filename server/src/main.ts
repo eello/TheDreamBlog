@@ -6,6 +6,7 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 import { LoggerService } from './logger/logger.service';
 import * as session from 'express-session';
+import * as passport from 'passport';
 import * as redis from 'redis';
 import * as connectRedis from 'connect-redis';
 
@@ -33,6 +34,11 @@ async function bootstrap() {
       store: new redisStore({ client: redisClient, ttl: 2 * 3600 }),
     }),
   );
+
+  /** passport 설정 */
+  app.use(passport.initialize());
+  app.use(passport.session());
+
   /** morgan 설정 */
   const MORGAN_FORMAT = `:remote-addr - :remote-user ":method :url HTTP/:http-version" :status ":referrer" ":user-agent" :response-time ms`;
   app.use(

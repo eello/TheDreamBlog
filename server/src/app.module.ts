@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { config } from './config/config';
 import { MysqlConfig } from './config/mysql.config';
 import { LoggerModule } from './logger/logger.module';
+import { Github2Module } from './github2/github2.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { LoggerModule } from './logger/logger.module';
       useClass: MysqlConfig,
     }),
     LoggerModule,
+    Github2Module,
   ],
   controllers: [],
   providers: [],

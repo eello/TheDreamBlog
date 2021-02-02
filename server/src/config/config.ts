@@ -16,4 +16,10 @@ export const config = () => ({
     synchronize: true,
     entities: ['dist/**/*.entity{.ts,.js}'],
   },
+  github2: {
+    clientID: process.env.GITHUB2_CLIENT_ID,
+    clientSecret: process.env.GITHUB2_CLIENT_SECRET,
+    callbackURL: process.env.GITHUB2_CALLBACK_URL,
+    scope: ['user'],
+  },
 });
