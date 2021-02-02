@@ -12,7 +12,7 @@ import * as connectRedis from 'connect-redis';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
-    cors: { origin: true },
+    cors: { origin: true, credentials: true },
   });
   app.setGlobalPrefix('/thedream.api');
   app.useGlobalPipes(

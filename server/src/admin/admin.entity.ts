@@ -11,7 +11,7 @@ export class Admin {
   @Column({ nullable: false })
   node_id: string;
 
-  @Column({ nullable: false })
+  @Column()
   display_name: string;
 
   @Column({ nullable: false })
