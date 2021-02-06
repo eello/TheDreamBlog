@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Nixie+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Codystar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+@keyframes scale {
+    from {
+        
+    }
+
+    to {
+        scale: 20px;
+    }
+}
+
+@keyframes flow {
+    from {
+        left:-530px;
+        bottom: 100px;
+    }
+
+    to {
+        left: 1650px;
+        bottom: 100px;
+    }
+}
+
+@keyframes flow-two {
+    from {
+        left: -700px;
+        top: 30px;
+    }
+    
+    to {
+        left: 1800px;
+        top: 30px;
+    }
+}
+
+body {
+    background-color: black;
+    background-image: url("/img/stars.jpg");
+    overflow-x: hidden;
+}
+
+
+.star {
+    width: 7px;
+    height: 7px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 30px 6px white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all .3s ease-in-out;
+}
+
+.star:hover {
+    box-shadow: 0 0 40px 10px white;
+    transform: scale(1.5);
+}
+
+.all-container {
+    margin-top: 200px;
+}
+
+.title {
+    display: flex;
+    margin-top: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.title__the-dream {
+    color: white;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 70px;
+    opacity: 0.5;
+}
+
+.cassiopeia {
+    display: flex;
+    justify-content: center;
+}
+
+.projects,
+.vision,
+.about-us,
+.sample {
+    color: white;
+    /* font-family: 'Nixie One', cursive; */
+    font-family: 'Codystar', cursive;
+    font-size: 20px;
+    margin-top: 15px;
+    white-space: nowrap;
+}
+
+.cassiopeia-one {
+    margin-top: 50px;
+    margin-right: 200px;
+}
+
+.cassiopeia-two {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 150px;
+    margin-right: 200px;
+}
+
+.cassiopeia-three {
+    width: 13px;
+    height: 13px;
+    border-radius: 8px;
+    margin-right: 200px;
+}
+
+.cassiopeia-four {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 150px;
+    margin-right: 10px;
+}
+
+.cassiopeia-five {
+    width: 15px;
+    height: 15px;
+    border-radius: 9px;
+    margin-top: -100px;
+    margin-left: 100px;
+}
+
+.real-dark-cloud {
+    width: 550px;
+    height: 300px;
+    opacity: 0.5;
+    position: absolute;
+    left: 20px;
+    bottom: 100px;
+    animation: flow 60s ease-in-out infinite;
+}
+
+.real-dark-cloud-two {
+    width: 700px;
+    height: 300px;
+    opacity: 0.5;
+    position: absolute;
+    left: -700px;
+    top: 30px;
+    animation: flow-two 60s ease-in-out infinite;
+    animation-delay: 10s;
+}
