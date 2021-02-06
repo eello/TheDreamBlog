@@ -16,6 +16,56 @@ ul {
   list-style-type: none;
 }
 
+.star {
+  background-color: #fff;
+  border-radius: 50% 50%;
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+.loaded {
+  animation: loading 0.6s 1 ease-out alternate;
+}
+
+.shine-1 {
+  animation: shine 1s ease-out infinite alternate;
+}
+
+.shine-2 {
+  animation: shine 1.5s ease-out infinite alternate;
+}
+
+.shine-3 {
+  animation: shine-3 2s ease-out infinite alternate;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes shine {
+  0% {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.99);
+  }
+}
+
+@keyframes shine-3 {
+  0% {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.99);
+  }
+}
+
 .wrap {
   height: 100%;
 

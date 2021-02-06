@@ -1,11 +1,6 @@
 const coverStars = document.querySelector(".cover-stars");
-const github = document.querySelector(".github");
 const windowWidth = window.innerWidth;
 const windowHeight = window.innerHeight / 2;
-
-function handleGithubLogin() {
-  window.location.href = "http://101.101.210.243/thedream.api/github2/login/";
-}
 
 function loadStar() {
   let top = 0;
@@ -36,7 +31,6 @@ function loadStar() {
 
 function init() {
   loadStar();
-  github.addEventListener("click", handleGithubLogin);
 }
 
 init();
