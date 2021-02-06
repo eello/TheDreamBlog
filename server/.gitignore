@@ -7,6 +7,9 @@
 /test
 *.*.spec.ts
 
+# markdowns 폴더 무시
+/markdowns
+
 package-lock.json
 ##
 
