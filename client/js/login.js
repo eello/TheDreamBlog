@@ -15,9 +15,9 @@ function loadStar() {
     star = document.createElement("div");
     star.classList.add("star");
     star.classList.add("loaded");
-    top = Math.round(Math.random() * windowHeight);
-    left = Math.round(Math.random() * windowWidth);
-    width = Math.round(Math.random() * 4);
+    top = Math.ceil(Math.random() * windowHeight);
+    left = Math.ceil(Math.random() * windowWidth);
+    width = Math.ceil(Math.random() * 4);
     if (i % 7 === 0) {
       star.style.top = String(top * 2) + "px";
     } else {
@@ -26,8 +26,9 @@ function loadStar() {
     star.style.left = String(left) + "px";
     star.style.width = String(width) + "px";
     star.style.height = String(width) + "px";
-    if (i % 5 === 0) {
-      star.classList.add("shine");
+    if (i % 3 === 0) {
+      let t = Math.ceil(Math.random() * 3);
+      star.classList.add("shine" + `-${t}`);
     }
     console.log(top, left);
     coverStars.appendChild(star);
