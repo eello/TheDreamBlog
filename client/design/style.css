@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+@keyframes move-lcloud {
+    from {
+        right: -100px;
+    }
+
+    to {
+        right: 70px;
+    }
+}
+
+@keyframes move-rcloud {
+    from {
+        right: -750px;
+    }
+
+    to {
+        right: -950px;
+        
+    }
+}
+
+@keyframes moon-appear {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        box-shadow: 0px 0px 1000px 10px white;
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}
+
+@keyframes moon-bright {
+    from {
+
+    }
+
+    to {
+        box-shadow: 0px 0px 1000px 10px white;
+    }
+}
+
+@keyframes appear-slow {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes btn-appear{
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    background-color: black;
+    background-image: url("/img/stars.jpg");
+    overflow-x: hidden;
+}
+
+.bg-moon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.moon {
+    overflow: hidden;
+    position: absolute;
+    margin-top: 500px;
+    border-radius: 200px;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: moon-bright 3s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.real-moon {
+    animation: moon-appear 2s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.human {
+    position: absolute;
+    top: 265px;
+    left: 765px;
+}
+
+.real-human {
+    width: 130px;
+    height: 130px;
+    transform: rotateZ(10deg);
+}
+
+.bg-stars {
+    display: flex;
+}
+
+.star {
+    margin-top: 100px;
+    background-color: white;
+    width: 5px;
+    height: 5px;
+    border-radius: 2.5px;
+    box-shadow: 0 0 30px 6px white;
+}
+
+.sstar {
+    background-color: white;
+    width: 3px;
+    height: 3px;
+    border-radius: 1.5px;
+    box-shadow: 0 0 20px 6px white;
+}
+
+.star-lone {
+    margin-left: 630px;
+}
+
+.star-ltwo {
+    margin-left: 520px;
+}
+
+.star-lthree {
+    margin-left: 400px;
+}
+
+.star-lfour {
+    margin-left: 600px;
+}
+
+.star-lfive {
+    margin-left: 380px;
+}
+
+.star-lsix {
+    margin-left: 600px;
+}
+
+.star-lseven {
+    margin-left: 340px;
+}
+
+.star-rone {
+    margin-left: 600px;
+}
+
+.star-rtwo {
+    margin-left: 500px;
+}
+
+.star-rthree {
+    margin-left: 630px;
+}
+
+.star-rfour {
+    margin-left: 700px;
+}
+
+.star-rfive {
+    margin-left: 560px;
+}
+
+.star-rsix {
+    margin-left: 450px;
+}
+
+.star-rseven {
+    margin-left: 750px;
+}
+
+.bg-cloud {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cloud {
+    margin-top: 150px;
+    top: -20px;
+    position: absolute;
+}
+
+.lcloud {
+    position: absolute;
+    right: -100px;
+    animation: move-lcloud 1s ease-in-out 2s;
+    animation-fill-mode: forwards;
+}
+
+.rcloud {
+    position: absolute;
+    right: -750px;
+    top: -120px;
+    animation: move-rcloud 1s ease-in-out 2s;
+    animation-fill-mode: forwards;
+}
+
+.welcome {
+    color: white;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 40px;
+    animation:btn-appear 2s ease-in-out;
+
+}
+
+.the-dream {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 450px;
+    right: 620px;
+}
+
+.the-dream-text {
+    color: white;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 100px;
+    animation: btn-appear 2s ease-in-out;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.go-home__btn,
+.go-admin__btn {
+    border: 2px solid white;
+    font-family: 'Do Hyeon', sans-serif;
+    color: white;
+    background-color: black;
+    width: 200px;
+    height: 50px;
+    font-size: 15px;
+    animation: btn-appear 2s ease-in-out;
+}
+
+
+.go-admin__btn {
+    margin-top: 10px;
+}
