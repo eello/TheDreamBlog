@@ -1,4 +1,37 @@
-.intro-text {
+.star {
+  background-color: #fff;
+  border-radius: 50% 50%;
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+.loaded {
+  animation: loading 0.6s 1 ease-out alternate;
+}
+
+.shine {
+  animation: shine 1.2s ease-out infinite alternate;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.99);
+  }
+}
+
+.intro-box {
   display: block;
   width: 650px;
   height: 400px;
@@ -53,4 +86,34 @@ button {
 button:hover {
   cursor: pointer;
   background-color: midnightblue;
+}
+
+.inter-email img {
+  width: 64px;
+}
+
+.inter-email .logo {
+  display: inline-block;
+  margin: 15px 50px;
+}
+
+.inter-email .logo:hover {
+  cursor: pointer;
+}
+
+footer {
+  width: 50%;
+  margin-top: 10%;
+  text-align: center;
+  color: darkgray;
+}
+
+footer a {
+  color: aliceblue;
+  text-decoration: none;
+  margin-left: 3%;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }

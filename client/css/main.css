@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  font-family: "Do Hyeon", sans-serif;
 }
 body {
   background: linear-gradient(#0c0d0e 10%, #1c1749 55%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
