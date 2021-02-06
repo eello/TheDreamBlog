@@ -3,18 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet" />
     <title>The-Dream's blog</title>
   </head>
   <body>
     <div class="wrap">
       <header>
-        <nav></nav>
+        <div class="thedream-logo">The D<img src="./img/dream.png" />eam</div>
+        <nav>
+          <ul class="nav-main">
+            <li class="nav-main-selected">Home</li>
+            <li>Post</li>
+            <li>Project</li>
+            <li>Plan</li>
+          </ul>
+        </nav>
       </header>
+      <aside>
+        <div class="aside-box">
+          <ul class="nav-aside">
+            <li class="nav-aside-selected">Home</li>
+            <li>
+              Post
+              <ul>
+                <li>- List</li>
+                <li>- New</li>
+              </ul>
+            </li>
+
+            <li>
+              Project
+              <ul>
+                <li>- List</li>
+                <li>- New</li>
+              </ul>
+            </li>
+            <li>Plan</li>
+          </ul>
+        </div>
+      </aside>
       <div class="container"></div>
-      <footer>
-        <hr />
-        &copy; The Dream.
-      </footer>
     </div>
+    <footer>
+      <hr />
+      &copy; The Dream.
+    </footer>
   </body>
 </html>
