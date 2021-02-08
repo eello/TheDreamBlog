@@ -51,4 +51,27 @@ export class ProjectService {
       console.error(err);
     }
   }
+
+  async updateProject(id: number, subject: string, markdonw: string) {
+    try {
+      const fileToUpdate: Project = await this.projectRepository.findOne(id);
+      let { file_path } = fileToUpdate;
+
+      if (subject.length) {
+        const new_file_path = `${__dirname}/../../markdowns/projects/${subject}.md`;
+
+        await this.projectRepository.save({
+          ...fileToUpdate,
+          file_path: new_file_path,
+        });
+
+        fs.renameSync(file_path, new_file_path);
+        file_path = new_file_path;
+      }
+
+      fs.writeFileSync(file_path, markdonw);
+    } catch (err) {
+      console.log(err);
+    }
+  }
 }

@@ -3,6 +3,7 @@ import {
   Controller,
   Get,
   Param,
+  Patch,
   Post,
   Request,
   //   UploadedFile,
@@ -50,5 +51,11 @@ export class ProjectController {
   uploadProject(@Request() req, @Body() project: CreateProjectDto) {
     const { subject, markdown } = project;
     this.projectService.createProject(subject, markdown);
+  }
+
+  @Patch(':id')
+  updateProject(@Param('id') id: number, @Body() project: CreateProjectDto) {
+    const { subject, markdown } = project;
+    this.projectService.updateProject(id, subject, markdown);
   }
 }
