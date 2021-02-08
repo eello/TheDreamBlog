@@ -74,4 +74,16 @@ export class ProjectService {
       console.log(err);
     }
   }
+
+  async deleteProject(id: number) {
+    try {
+      const fileToDelete: Project = await this.projectRepository.findOne(id);
+      const { file_path } = fileToDelete;
+
+      fs.unlinkSync(file_path);
+      await this.projectRepository.remove(fileToDelete);
+    } catch (err) {
+      console.error(err);
+    }
+  }
 }
