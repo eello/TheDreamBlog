@@ -51,17 +51,17 @@ export class ProjectController {
   @Post('code')
   uploadProject(@Request() req, @Body() project: CreateProjectDto) {
     const { subject, markdown } = project;
-    this.projectService.createProject(subject, markdown);
+    return this.projectService.createProject(subject, markdown);
   }
 
   @Patch(':id')
   updateProject(@Param('id') id: number, @Body() project: CreateProjectDto) {
     const { subject, markdown } = project;
-    this.projectService.updateProject(id, subject, markdown);
+    return this.projectService.updateProject(id, subject, markdown);
   }
 
   @Delete(':id')
   deleteProject(@Param('id') id: number) {
-    this.projectService.deleteProject(id);
+    return this.projectService.deleteProject(id);
   }
 }
