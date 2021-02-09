@@ -48,7 +48,7 @@ export class ProjectController {
     return this.projectService.getProject(id);
   }
 
-  @Post('code')
+  @Post()
   uploadProject(@Request() req, @Body() project: CreateProjectDto) {
     const { subject, markdown } = project;
     return this.projectService.createProject(subject, markdown);
