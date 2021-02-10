@@ -81,7 +81,7 @@ export class ProjectService {
     }
   }
 
-  async updateProject(id: number, subject: string, markdonw: string) {
+  async updateProject(id: number, subject: string, markdown: string) {
     const fileToUpdate: Project = await this.projectRepository.findOne(id);
     if (!fileToUpdate) {
       this.logger.error(`Cannot found project id ${id}`);
@@ -97,7 +97,7 @@ export class ProjectService {
     let { file_path } = fileToUpdate;
 
     try {
-      if (subject.length) {
+      if (subject && subject.length) {
         const new_file_path = `${__dirname}/../../markdowns/projects/${subject}.md`;
 
         await this.projectRepository.save({
@@ -109,7 +109,7 @@ export class ProjectService {
         file_path = new_file_path;
       }
 
-      fs.writeFileSync(file_path, markdonw);
+      if (markdown && markdown.length) fs.writeFileSync(file_path, markdown);
     } catch (err) {
       this.logger.error(err);
       throw new InternalServerErrorException();

@@ -13,6 +13,7 @@ import {
 // import { FileInterceptor } from '@nestjs/platform-express';
 // import * as fs from 'fs';
 import { CreateProjectDto } from './dto/create-project.dto';
+import { UpdateProjectDto } from './dto/update-project.dto';
 import { ProjectService } from './project.service';
 
 @Controller('project')
@@ -56,7 +57,7 @@ export class ProjectController {
   }
 
   @Patch(':id')
-  updateProject(@Param('id') id: number, @Body() project: CreateProjectDto) {
+  updateProject(@Param('id') id: number, @Body() project: UpdateProjectDto) {
     const { subject, markdown } = project;
     return this.projectService.updateProject(id, subject, markdown);
   }
