@@ -18,12 +18,14 @@ import { UnAuthMiddleware } from 'src/middleware/un-auth.middleware';
 })
 export class ProjectModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
-    consumer
-      .apply(UnAuthMiddleware)
-      .exclude(
-        { path: '/thedream.api/project', method: RequestMethod.GET },
-        { path: '/thedream.api/project/:id', method: RequestMethod.GET },
-      )
-      .forRoutes('project');
+    if (process.env.NODE_ENV === 'production') {
+      consumer
+        .apply(UnAuthMiddleware)
+        .exclude(
+          { path: '/thedream.api/project', method: RequestMethod.GET },
+          { path: '/thedream.api/project/:id', method: RequestMethod.GET },
+        )
+        .forRoutes('project');
+    }
   }
 }
