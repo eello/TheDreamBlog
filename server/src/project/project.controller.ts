@@ -50,8 +50,9 @@ export class ProjectController {
 
   @Post()
   uploadProject(@Request() req, @Body() project: CreateProjectDto) {
+    const { user } = req;
     const { subject, markdown } = project;
-    return this.projectService.createProject(subject, markdown);
+    return this.projectService.createProject(user, subject, markdown);
   }
 
   @Patch(':id')

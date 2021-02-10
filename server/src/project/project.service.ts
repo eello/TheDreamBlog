@@ -53,7 +53,7 @@ export class ProjectService {
     return { subject, markdown };
   }
 
-  createProject(subject: string, markdown: string) {
+  createProject(user: string, subject: string, markdown: string) {
     try {
       const file_path = this.writeCodeIntoFile(subject, markdown);
 
@@ -63,6 +63,7 @@ export class ProjectService {
         file_path,
       };
 
+      if (user) project.writer = user;
       this.projectRepository.save(project);
     } catch (err) {
       this.logger.error(err);
