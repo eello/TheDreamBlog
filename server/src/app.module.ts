@@ -7,6 +7,7 @@ import { MysqlConfig } from './config/mysql.config';
 import { LoggerModule } from './logger/logger.module';
 import { Github2Module } from './github2/github2.module';
 import { ProjectModule } from './project/project.module';
+import { PostModule } from './post/post.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { ProjectModule } from './project/project.module';
     LoggerModule,
     Github2Module,
     ProjectModule,
+    PostModule,
   ],
   controllers: [],
   providers: [],
