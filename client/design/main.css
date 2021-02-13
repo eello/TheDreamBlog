@@ -1,15 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Nixie+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Codystar&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spirax&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
 
-@keyframes scale {
-    from {
-        
-    }
-
-    to {
-        scale: 20px;
-    }
+@keyframes shine {
+    
 }
 
 @keyframes flow {
@@ -36,10 +32,65 @@
     }
 }
 
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+    }
+
+    70% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(0.95);
+    }
+}
+
+@keyframes tail {
+    0% {
+        width: 0px;
+    }
+
+    30% {
+        width: 100px;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes falling {
+    0% {
+        transform:translateX(0);
+    }
+    
+    100% {
+        transform: translateX(300px);
+    }
+}
+
+
+@keyframes shining {
+    0% {
+        width: 0px;
+    }
+    50% {
+        width: 30px;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+
 body {
     background-color: black;
     background-image: url("/img/stars.jpg");
     overflow-x: hidden;
+    z-index: -3;
+    position: inherit;
+    overflow-y: hidden;
 }
 
 
@@ -73,8 +124,9 @@ body {
 
 .title__the-dream {
     color: white;
-    font-family: 'Do Hyeon', sans-serif;
-    font-size: 70px;
+    /* font-family: 'Do Hyeon', sans-serif; */
+    font-family: 'Quintessential', cursive;
+    font-size: 50px;
     opacity: 0.5;
 }
 
@@ -89,15 +141,19 @@ body {
 .sample {
     color: white;
     /* font-family: 'Nixie One', cursive; */
-    font-family: 'Codystar', cursive;
-    font-size: 20px;
+    /* font-family: 'Codystar', cursive; */
+    font-family: 'Spirax', cursive;
+    font-size: 25px;
     margin-top: 15px;
     white-space: nowrap;
+    transform: scale(1);
 }
 
 .cassiopeia-one {
     margin-top: 50px;
     margin-right: 200px;
+    animation: pulse 3s infinite;
+    animation-delay: 0.2s;
 }
 
 .cassiopeia-two {
@@ -106,6 +162,8 @@ body {
     border-radius: 5px;
     margin-top: 150px;
     margin-right: 200px;
+    animation: pulse 3s infinite;
+    animation-delay: 2s;
 }
 
 .cassiopeia-three {
@@ -113,6 +171,8 @@ body {
     height: 13px;
     border-radius: 8px;
     margin-right: 200px;
+    animation: pulse 3s infinite;
+    animation-delay: 4s;
 }
 
 .cassiopeia-four {
@@ -121,6 +181,8 @@ body {
     border-radius: 5px;
     margin-top: 150px;
     margin-right: 10px;
+    animation: pulse 3s infinite;
+    animation-delay: 6s;
 }
 
 .cassiopeia-five {
@@ -129,9 +191,12 @@ body {
     border-radius: 9px;
     margin-top: -100px;
     margin-left: 100px;
+    animation: pulse 3s infinite;
+    animation-delay: 8s;
 }
 
 .real-dark-cloud {
+    z-index: -1;
     width: 550px;
     height: 300px;
     opacity: 0.5;
@@ -142,6 +207,7 @@ body {
 }
 
 .real-dark-cloud-two {
+    z-index: -1;
     width: 700px;
     height: 300px;
     opacity: 0.5;
@@ -150,4 +216,121 @@ body {
     top: 30px;
     animation: flow-two 60s ease-in-out infinite;
     animation-delay: 10s;
+}
+
+.shooting-star-container {
+    position: absolute;
+    right: 100px;
+    top: 300px;
+    transform: rotateZ(140deg);
+}
+
+.shooting-star-one {
+    position: absolute;
+    right: 100px;
+    top: 100px;
+    height: 4px;
+    background: linear-gradient(-45deg, white, rgba(0, 0, 255, 0));
+    border-radius: 999px;
+    filter: drop-shadow(0 0 6px #929292);
+    animation: tail 5s ease-in-out infinite,
+               falling 5s ease-in-out infinite;
+}
+
+.shooting-star-one::before, .shooting-star-one::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 2px);
+    right: 0;
+    height: 4px;
+    width: 30px;
+    background: linear-gradient(-45deg, rgba(0, 0, 255, 0), white, rgba(0, 0, 255, 0));
+    border-radius: 100%;
+    transform: translateX(50%) rotateZ(45deg);
+    animation: shining 5s ease-in-out infinite;
+}
+
+.shooting-star-one::after {
+    transform: translateX(50%) rotateZ(-45deg);
+}
+
+.shooting-star-two {
+    position: absolute;
+    left: 900px;
+    top: 600px;
+    height: 4px;
+    background: linear-gradient(-45deg, white, rgba(0, 0, 255, 0));
+    border-radius: 999px;
+    filter: drop-shadow(0 0 6px #929292);
+    animation: tail 5s ease-in-out infinite,
+               falling 5s ease-in-out infinite;
+    animation-delay: 3s;
+}
+
+.shooting-star-two::before, .shooting-star-two::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 2px);
+    right: 0;
+    height: 4px;
+    width: 30px;
+    background: linear-gradient(-45deg, rgba(0, 0, 255, 0), white, rgba(0, 0, 255, 0));
+    border-radius: 100%;
+    transform: translateX(50%) rotateZ(45deg);
+    animation: shining 5s ease-in-out infinite;
+    animation-delay: 3s;
+}
+
+.shooting-star-two::after {
+    transform: translateX(50%) rotateZ(-45deg);
+}
+
+
+.shooting-star-three {
+    position: absolute;
+    left: 200px;
+    top: -200px;
+    height: 4px;
+    background: linear-gradient(-45deg, white, rgba(0, 0, 255, 0));
+    border-radius: 999px;
+    filter: drop-shadow(0 0 6px #929292);
+    animation: tail 3s ease-in-out infinite,
+               falling 3s ease-in-out infinite;
+    animation-delay: 6s;
+}
+
+.shooting-star-three::before, .shooting-star-three::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 2px);
+    right: 0;
+    height: 4px;
+    width: 30px;
+    background: linear-gradient(-45deg, rgba(0, 0, 255, 0), white, rgba(0, 0, 255, 0));
+    border-radius: 100%;
+    transform: translateX(50%) rotateZ(45deg);
+    animation: shining 3s ease-in-out infinite;
+    animation-delay: 6s;
+}
+
+.shooting-star-three::after {
+    transform: translateX(50%) rotateZ(-45deg);
+}
+
+.shining-stars-one,
+.shining-stars-two,
+.shining-stars-three,
+.shining-stars-four,
+.shining-stars-five {
+    width: 5px;
+    height: 5px;
+    border-radius: 2.5px;
+    background-color: white;
+}
+
+.shining-stars-one {
+    position: absolute;
+    top: 200px;
+    left: 400px;
+    animation: pulse 3s infinite;
 }
