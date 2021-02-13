@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet" />
+    <title>The-Dream's admin page</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="cover-stars"></div>
+      <header>
+        <div class="thedream-logo">The D<img src="./img/dream.png" />eam admin</div>
+        <nav>
+          <ul class="nav-main">
+            <li class="nav-main-home">Home</li>
+            <li class="nav-main-post-list nav-main-selected">Post</li>
+            <li class="nav-main-project-list">Project</li>
+            <li class="nav-main-plan">Plan</li>
+          </ul>
+        </nav>
+      </header>
+      <aside>
+        <div class="aside-box">
+          <ul class="nav-aside">
+            <li class="nav-aside-home">Home</li>
+            <li class="nav-post">
+              Post
+              <ul>
+                <li class="nav-aside-post-list">- List</li>
+                <li class="nav-aside-post-new nav-aside-selected">- New</li>
+              </ul>
+            </li>
+
+            <li class="nav-project">
+              Project
+              <ul>
+                <li class="nav-aside-project-list">- List</li>
+                <li class="nav-aside-project-new">- New</li>
+              </ul>
+            </li>
+            <li class="nav-aside-plan">Plan</li>
+          </ul>
+        </div>
+      </aside>
+      <div class="container">
+        <form class="post-create-form" action="">
+          <h2>NEW POST</h2>
+          <input type="text" name="subject" id="subject" placeholder="title" />
+          <input type="url" name="link" id="link" placeholder="url" />
+          <input type="text" name="post-author" id="post-author" placeholder="author" />
+          <input type="date" name="post-date" id="post-date" />
+          <textarea name="tags" id="tags" placeholder="tags" cols="30" rows="10"></textarea>
+          <button class="btn-post-create" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      &copy; The Dream.
+    </footer>
+    <script src="./js/index.js"></script>
+    <script src="./js/nav.js"></script>
+  </body>
+</html>

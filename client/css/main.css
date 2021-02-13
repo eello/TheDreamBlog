@@ -25,6 +25,7 @@ a:visited {
   border-radius: 50% 50%;
   position: absolute;
   transform: rotate(45deg);
+  opacity: 0.7;
 }
 
 .loaded {
@@ -74,7 +75,7 @@ a:visited {
   height: 100%;
 
   border-radius: 30px;
-  background-color: rgba(245, 245, 245, 0.95);
+  background-color: rgba(245, 245, 245, 0.85);
   margin: 0 auto;
   overflow: hidden;
 }
@@ -177,6 +178,7 @@ header {
   height: 73%;
   background-color: rgb(245, 245, 245);
   border-radius: 10px;
+  box-shadow: 0 20px 30px black;
 }
 
 footer {
@@ -272,4 +274,74 @@ table input[type="checkbox"]:checked + label::before {
   color: FireBrick;
   text-shadow: 1px 1px #fff;
   background: #e9ecee;
+}
+
+/*    post create form    */
+
+.post-create-form {
+  display: block;
+  width: 70%;
+  height: 90%;
+  margin: 0 auto;
+  padding: 3% 5%;
+  transition-duration: 1s;
+}
+
+.post-create-form h2 {
+  font-size: 2rem;
+}
+
+.post-create-form input {
+  display: block;
+  margin: 10px auto;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.5rem;
+  border: 2px solid rgb(245, 245, 245);
+  border-radius: 10px;
+  transition-duration: 0.5s;
+}
+
+.post-create-form input:focus {
+  outline: none;
+  border-radius: 10px;
+  border: 3px inset midnightblue;
+}
+
+.post-create-form textarea {
+  display: block;
+  margin: 10px auto;
+  width: 100%;
+  height: 30%;
+  padding: 10px;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  border: 2px solid rgb(245, 245, 245);
+  border-radius: 10px;
+  transition-duration: 0.5s;
+}
+
+.post-create-form textarea:focus {
+  outline: none;
+  border-radius: 10px;
+  border: 3px inset midnightblue;
+}
+
+.btn-post-create {
+  display: block;
+  float: right;
+  width: 12%;
+  height: 5%;
+  margin-top: 15px;
+  background-color: rgb(41, 41, 185);
+  color: #e9ecee;
+  font-size: larger;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px black;
+  transition-duration: 0.5s;
+}
+
+.btn-post-create:hover {
+  background-color: midnightblue;
+  cursor: pointer;
 }
