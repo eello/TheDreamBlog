@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Nixie+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Codystar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spirax&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body {
+    background-color: black;
+    background-image: url("/img/stars.jpg");
+    overflow-x: hidden;
+}
+
+.title-continaer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    margin-top: 100px;
+}
+
+.real-title {
+    color: white;
+    font-family: 'Quintessential', cursive;
+    font-size: 50px;
+    opacity: 0.8;
+}
+
+.contents-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.goal-container {
+    width: 1200px;
+    height: 500vh;
+    border: 2px solid white;
+    border-radius: 3%;
+    margin-top: 100px;
+}
+
+.goal-one,
+.goal-two,
+.goal-three {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.goal-two,
+.goal-three {
+    margin-top: 200px;
+}
+
+.goal-one-title,
+.goal-two-title,
+.goal-three-title {
+    font-family: 'Lobster', cursive;
+    color: white;
+    font-size: 30px;
+}
+
+.goal-one-img,
+.goal-two-img,
+.goal-three-img {
+    background-image: url("/img/space1.jpg");
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    border-radius: 5%;
+}
+
+.goal-one-text,
+.goal-two-text,
+.goal-three-text {
+    width: 200px;
+    margin-top: 20px;
+    color: white;
+}
