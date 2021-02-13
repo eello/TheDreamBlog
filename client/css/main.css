@@ -1,4 +1,5 @@
-html {
+html,
+body {
   height: 100%;
 }
 html,
@@ -8,12 +9,15 @@ body {
 }
 
 body {
-  height: 100%;
   background: linear-gradient(#0c0d0e 10%, rgb(28, 23, 73) 55%);
 }
 
 ul {
   list-style-type: none;
+}
+
+a:visited {
+  color: midnightblue;
 }
 
 .star {
@@ -81,7 +85,6 @@ header {
   height: 55px;
   margin: 0 auto;
   margin-bottom: 20px;
-  border-bottom: 1px solid midnightblue;
   /* background-color: rgba(132, 181, 255, 0.2); */
   /* border-radius: 10px; */
 }
@@ -90,9 +93,10 @@ header {
   position: absolute;
   width: 350px;
   top: 62px;
-  left: 8%;
-  font-size: 40px;
+  left: 4.5%;
+  font-size: 2.6rem;
   text-align: center;
+  color: rgb(28, 23, 73);
 }
 
 .thedream-logo img {
@@ -102,16 +106,17 @@ header {
 .nav-main {
   width: 80%;
   line-height: 55px;
-  margin: 3% auto;
+  margin: 3%;
+  margin-left: 15%;
   text-align: center;
 }
 
 .nav-main li {
   display: inline-block;
   margin: 0 3%;
-  font-size: 36px;
+  font-size: 2.4rem;
   transition-duration: 0.5s;
-  color: midnightblue;
+  color: rgb(28, 23, 73);
   border-radius: 20px;
 }
 
@@ -129,18 +134,19 @@ header {
 
 .aside-box {
   float: left;
-  width: 300px;
-  height: 450px;
-  margin-left: 7.5%;
+  width: 13%;
+  height: 15%;
+  margin-left: 3.5%;
   margin-right: 3.5%;
   padding: 20px 0;
   color: whitesmoke;
   background: linear-gradient(#0c0d0e 10%, rgb(28, 23, 73) 55%);
   border-radius: 30px;
+  box-shadow: 10px 10px 10px #0c0d0e;
 }
 
 .aside-box ul > li {
-  font-size: 28px;
+  font-size: 2rem;
   margin: 10px 0;
   transition-duration: 0.5s;
 }
@@ -156,7 +162,7 @@ header {
 }
 
 .aside-box ul > li > ul > li {
-  font-size: 20px;
+  font-size: 1.4rem;
 }
 
 .aside-box .nav-aside-selected {
@@ -166,15 +172,104 @@ header {
 
 .container {
   float: left;
-  width: 1400px;
+  width: 75%;
+  margin-bottom: 120px;
+  height: 73%;
   background-color: rgb(245, 245, 245);
+  border-radius: 10px;
 }
 
 footer {
-  width: 80%;
+  display: block;
+  width: 90%;
   margin: 0 auto;
   position: absolute;
-  left: 10%;
+  left: 5%;
   bottom: 30px;
   text-align: center;
+}
+
+/*    post list table     */
+
+table {
+  width: 90%;
+  table-layout: fixed;
+}
+table,
+th,
+td {
+  margin: 10px auto;
+  border-collapse: collapse;
+  font-size: 1.5rem;
+}
+
+th,
+td {
+  padding: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+th {
+  text-align: left;
+  border-bottom: 1px solid black;
+}
+
+td:nth-of-type(1) {
+  color: midnightblue;
+}
+
+caption {
+  margin: 20px;
+  font-size: larger;
+  font-weight: bolder;
+}
+.col-title {
+  width: 50%;
+}
+
+.col-date {
+  width: 20%;
+}
+
+.col-update {
+  color: GoldenRod;
+}
+
+.col-delete {
+  width: 10%;
+  color: FireBrick;
+}
+
+table input[type="checkbox"] {
+  display: none;
+}
+
+table label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+table label::before {
+  content: "";
+  display: inline-block;
+  margin-left: 20px;
+  padding: 5px;
+  width: 13px; /* 체크박스의 너비를 지정 */
+  height: 10px; /* 체크박스의 높이를 지정 */
+  line-height: 10px; /* 세로정렬을 위해 높이값과 일치 */
+  text-align: center;
+  vertical-align: middle;
+  background: #fafafa;
+  border: 1px solid #cacece;
+  border-radius: 3px;
+}
+
+table input[type="checkbox"]:checked + label::before {
+  content: "\2714";
+  color: FireBrick;
+  text-shadow: 1px 1px #fff;
+  background: #e9ecee;
 }

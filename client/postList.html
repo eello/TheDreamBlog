@@ -14,8 +14,8 @@
         <div class="thedream-logo">The D<img src="./img/dream.png" />eam admin</div>
         <nav>
           <ul class="nav-main">
-            <li class="nav-main-home nav-main-selected">Home</li>
-            <li class="nav-main-post-list">Post</li>
+            <li class="nav-main-home">Home</li>
+            <li class="nav-main-post-list nav-main-selected">Post</li>
             <li class="nav-main-project-list">Project</li>
             <li class="nav-main-plan">Plan</li>
           </ul>
@@ -24,11 +24,11 @@
       <aside>
         <div class="aside-box">
           <ul class="nav-aside">
-            <li class="nav-aside-home nav-aside-selected">Home</li>
+            <li class="nav-aside-home">Home</li>
             <li class="nav-post">
               Post
               <ul>
-                <li class="nav-aside-post-list">- List</li>
+                <li class="nav-aside-post-list nav-aside-selected">- List</li>
                 <li class="nav-aside-post-new">- New</li>
               </ul>
             </li>
@@ -44,7 +44,37 @@
           </ul>
         </div>
       </aside>
-      <div class="container"></div>
+      <div class="container">
+        <table>
+          <caption>
+            Posts List
+          </caption>
+          <colgroup>
+            <col class="col-title" />
+            <col class="col-author" />
+            <col class="col-date" />
+            <col class="col-delete" />
+          </colgroup>
+          <tr>
+            <th class="col-title">Title</th>
+            <th class="col-author">Author</th>
+            <th class="col-date">Date</th>
+            <th class="col-delete">Delete</th>
+          </tr>
+          <tr>
+            <td><a href="">Jillasdasdsadsaadsaddasadadsadadsadadsaddaddsadadsadadsaddaddsadadsadadsaddaddsadadsadadsaddadadad</a></td>
+            <td>on1ystar</td>
+            <td>2020-02-13</td>
+            <td><input type="checkbox" name="post-delete" id="1" /><label class="post-delete-btn" for="1"></label></td>
+          </tr>
+          <tr>
+            <td><a href="">asdsadasd</a></td>
+            <td>on1ystar</td>
+            <td>2020-02-13</td>
+            <td><input type="checkbox" name="post-delete" id="2" /><label class="post-delete-btn" for="2"></label></td>
+          </tr>
+        </table>
+      </div>
     </div>
     <footer>
       <hr />
