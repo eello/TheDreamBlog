@@ -10,12 +10,14 @@ import {
   //   UploadedFile,
   //   UseInterceptors,
 } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 // import { FileInterceptor } from '@nestjs/platform-express';
 // import * as fs from 'fs';
 import { CreateProjectDto } from './dto/create-project.dto';
 import { UpdateProjectDto } from './dto/update-project.dto';
 import { ProjectService } from './project.service';
 
+@ApiTags('Projects')
 @Controller('project')
 export class ProjectController {
   /** file upload 방식으로 할 경우 쓰이는 코드 */
