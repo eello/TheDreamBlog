@@ -100,8 +100,10 @@ body {
     width: 400px;
 }
 
-.sj-introduce {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.sj-name,
+.js-name,
+.cy-name {
+    color: white;
+    font-size: 30px;
+    margin-top: 10px;
 }
