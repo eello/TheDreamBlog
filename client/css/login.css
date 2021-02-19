@@ -1,7 +1,137 @@
+html,
+body {
+  height: 100%;
+}
+html,
+body {
+  padding: 10px;
+  font-family: "Do Hyeon", sans-serif;
+}
+
 body {
   background: linear-gradient(#0c0d0e 10%, rgb(28, 23, 73) 55%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   overflow: hidden;
 }
+
+.wrap {
+  height: 100%;
+  border-radius: 30px;
+  background-color: rgba(245, 245, 245, 0);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+header {
+  display: block;
+  width: 85%;
+  height: 55px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  /* background-color: rgba(132, 181, 255, 0.2); */
+  /* border-radius: 10px; */
+}
+
+.thedream-logo {
+  position: absolute;
+  width: 350px;
+  top: 62px;
+  left: 4.5%;
+  font-size: 2.6rem;
+  text-align: center;
+  color: rgb(28, 23, 73);
+}
+
+.thedream-logo img {
+  width: 36px;
+}
+
+.nav-main {
+  width: 80%;
+  line-height: 55px;
+  margin: 3%;
+  margin-left: 15%;
+  text-align: center;
+}
+
+.nav-main li {
+  display: inline-block;
+  margin: 0 3%;
+  font-size: 2.4rem;
+  transition-duration: 0.5s;
+  color: rgb(28, 23, 73);
+  border-radius: 20px;
+}
+
+.nav-main li:hover {
+  background: linear-gradient(#0c0d0e 10%, rgb(28, 23, 73) 55%);
+  padding: 0 10px;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.nav-main .nav-main-selected {
+  color: rgb(25, 25, 112);
+  text-decoration: underline;
+}
+
+.aside-box {
+  float: left;
+  width: 13%;
+  height: 15%;
+  margin-left: 3.5%;
+  margin-right: 3.5%;
+  padding: 20px 0;
+  color: whitesmoke;
+  background: linear-gradient(#0c0d0e 10%, rgb(28, 23, 73) 55%);
+  border-radius: 30px;
+  box-shadow: 10px 10px 10px #0c0d0e;
+}
+
+.aside-box ul > li {
+  font-size: 2rem;
+  margin: 10px 0;
+  transition-duration: 0.5s;
+}
+
+.aside-box ul > li:hover {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.aside-box ul > li > ul > li:hover {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.aside-box ul > li > ul > li {
+  font-size: 1.4rem;
+}
+
+.aside-box .nav-aside-selected {
+  text-decoration: underline;
+  margin-left: 10px;
+}
+
+.container {
+  float: left;
+  width: 75%;
+  margin-bottom: 120px;
+  height: 73%;
+  background-color: rgb(245, 245, 245);
+  border-radius: 10px;
+  box-shadow: 0 20px 30px black;
+}
+
+footer {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  position: absolute;
+  left: 5%;
+  bottom: 30px;
+  text-align: center;
+}
+
 .container-login {
   width: 1130px;
   margin: 0 auto;
@@ -62,7 +192,7 @@ body {
   width: 650px;
   height: 400px;
   margin: 0 auto;
-  margin-top: 20%;
+  margin-top: 15%;
   text-align: center;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.9);
@@ -89,7 +219,8 @@ input {
   width: 460px;
   height: 40px;
   border: 3px solid rgb(255, 255, 255);
-  border-bottom: 3px solid midnightblue;
+  border-radius: 10px;
+
   font-size: large;
   padding: 5px 10px;
   transition-duration: 1s;
@@ -151,4 +282,10 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+footer a:visited {
+  color: aliceblue;
+
+  text-decoration: none;
 }

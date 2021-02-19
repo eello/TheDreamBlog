@@ -45,22 +45,24 @@
         </div>
       </aside>
       <div class="container">
-        <form class="post-create-form" action="">
+        <form class="post-create-form" method="POST">
           <h2>NEW POST</h2>
           <input type="text" name="subject" id="subject" placeholder="title" />
           <input type="url" name="link" id="link" placeholder="url" />
-          <input type="text" name="post-author" id="post-author" placeholder="author" />
+          <input type="url" name="thumbnailUrl" id="thumbnail-url" placeholder="thumbnail url" />
           <input type="date" name="post-date" id="post-date" />
-          <textarea name="tags" id="tags" placeholder="tags" cols="30" rows="10"></textarea>
+          <textarea name="tags" id="tags" placeholder="tags" cols="30" rows="1"></textarea>
+          <textarea name="description" id="description" placeholder="description" cols="30" rows="6"></textarea>
           <button class="btn-post-create" type="submit">Submit</button>
         </form>
       </div>
+      <footer>
+        <hr />
+        &copy; The Dream.
+      </footer>
     </div>
-    <footer>
-      <hr />
-      &copy; The Dream.
-    </footer>
     <script src="./js/index.js"></script>
     <script src="./js/nav.js"></script>
+    <script src="./js/postNew.js"></script>
   </body>
 </html>
