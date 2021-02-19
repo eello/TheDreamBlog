@@ -22,6 +22,9 @@ export class Post {
   @Column({ default: null })
   writer?: string;
 
+  @Column({ charset: 'utf8mb4', collation: 'utf8mb4_unicode_ci' })
+  description?: string;
+
   @Column({ name: 'thumbnail_url', nullable: true })
   thumbnailUrl?: string;
 
