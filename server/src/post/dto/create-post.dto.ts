@@ -12,7 +12,7 @@ export class CreatePostDto {
   @MinLength(1)
   readonly link: string;
 
-  @ApiProperty()
+  @ApiPropertyOptional()
   @IsOptional()
   @IsString()
   readonly thumbnailUrl: string;
