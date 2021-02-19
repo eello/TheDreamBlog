@@ -24,8 +24,9 @@ export class PostService {
 
   async createPost(writer: string, post: CreatePostDto) {
     try {
-      const { subject, link } = post;
+      const { subject, link, thumbnailUrl } = post;
       const newPost: Post = { subject, link };
+      if (thumbnailUrl) newPost.thumbnailUrl = thumbnailUrl;
 
       if (process.env.NODE_ENV === 'production') newPost.writer = writer;
 
@@ -59,6 +60,7 @@ export class PostService {
   async updatePost(id: number, post: UpdatePostDto) {
     const subject: string = post?.subject;
     const link: string = post?.link;
+    const thumbnailUrl: string = post?.thumbnailUrl;
 
     const postToUpdate: Post = await this.postRepository.findOne(id);
     if (!postToUpdate) {
@@ -74,7 +76,9 @@ export class PostService {
 
     if (subject) postToUpdate.subject = subject;
     if (link) postToUpdate.link = link;
-    if (subject || link) this.postRepository.save(postToUpdate);
+    if (thumbnailUrl) postToUpdate.thumbnailUrl = thumbnailUrl;
+
+    if (subject || link || thumbnailUrl) this.postRepository.save(postToUpdate);
 
     try {
       let tags: string[] | Tag[] = post?.tags;

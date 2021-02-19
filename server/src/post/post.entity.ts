@@ -22,6 +22,9 @@ export class Post {
   @Column({ default: null })
   writer?: string;
 
+  @Column({ name: 'thumbnail_url', nullable: true })
+  thumbnailUrl?: string;
+
   @CreateDateColumn({ name: 'created_at' })
   createdAt?: Date;
 
