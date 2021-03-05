@@ -41,6 +41,7 @@ function printPostList(postList) {
     postListTable.insertAdjacentHTML("beforeend", post);
   });
 }
+
 function init() {
   getPostList();
 }

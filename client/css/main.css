@@ -1,6 +1,4 @@
-html {
-  height: 150%;
-}
+html,
 body {
   height: 100%;
   min-height: 100%;
@@ -8,12 +6,7 @@ body {
 
 html,
 body {
-  padding: 10px;
   font-family: "Do Hyeon", sans-serif;
-}
-
-body {
-  background: linear-gradient(#0c0d0e 10%, rgb(28, 23, 73) 55%);
 }
 
 ul {
@@ -24,61 +17,7 @@ a:visited {
   color: midnightblue;
 }
 
-.star {
-  background-color: #fff;
-  border-radius: 50% 50%;
-  position: absolute;
-  transform: rotate(45deg);
-  opacity: 0.7;
-}
-
-.loaded {
-  animation: loading 0.6s 1 ease-out alternate;
-}
-
-.shine-1 {
-  animation: shine 1s ease-out infinite alternate;
-}
-
-.shine-2 {
-  animation: shine 1.5s ease-out infinite alternate;
-}
-
-.shine-3 {
-  animation: shine-3 2s ease-out infinite alternate;
-}
-
-@keyframes loading {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes shine {
-  0% {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-  100% {
-    background-color: rgba(255, 255, 255, 0.99);
-  }
-}
-
-@keyframes shine-3 {
-  0% {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-  100% {
-    box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.6);
-    background-color: rgba(255, 255, 255, 0.99);
-  }
-}
-
 .wrap {
-  height: 90%;
-  border-radius: 30px;
-  background-color: rgba(245, 245, 245, 0.85);
   margin: 0 auto;
   overflow: hidden;
 }
@@ -93,10 +32,17 @@ header {
   /* border-radius: 10px; */
 }
 
+.admin {
+  position: absolute;
+  top: 4.5%;
+  left: 4.5%;
+  font-size: 2.6rem;
+  color: rgb(28, 23, 73);
+}
+
 .thedream-logo {
   position: absolute;
-  width: 350px;
-  top: 62px;
+  top: 7%;
   left: 4.5%;
   font-size: 2.6rem;
   text-align: center;
@@ -108,10 +54,10 @@ header {
 }
 
 .nav-main {
-  width: 80%;
+  width: 60%;
   line-height: 55px;
   margin: 3%;
-  margin-left: 15%;
+  margin-left: 25%;
   text-align: center;
 }
 
@@ -178,9 +124,6 @@ header {
   float: left;
   width: 75%;
   margin-bottom: 120px;
-  background-color: rgb(245, 245, 245);
-  border-radius: 10px;
-  box-shadow: 0 20px 30px black;
 }
 
 footer {
@@ -327,12 +270,16 @@ table input[type="checkbox"]:checked + label::before {
   border: 3px inset midnightblue;
 }
 
+.post-create-form .project-subject {
+  width: 97.5%;
+}
+
 .btn-post-create {
   display: block;
   float: right;
-  width: 12%;
-  height: 5%;
-  margin: 7px 0;
+  width: 100%;
+  margin-top: 2%;
+  padding: 1.2%;
   background-color: rgb(41, 41, 185);
   color: #e9ecee;
   font-size: larger;
